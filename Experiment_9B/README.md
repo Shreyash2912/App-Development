@@ -78,3 +78,4 @@ To develop a simple To-Do List application in **React Native** using **Expo SQLi
 - Users can **mark tasks as completed**, which will show **strikethrough text**.  
 - Users can **delete tasks**, which removes them from the list and database.  
 - All tasks are **persisted locally** in SQLite and remain after closing the app.
+- You can view the output over [here](https://drive.google.com/file/d/18KF9rN4KWUAI1A3jtxWBc-mN5JpmYz24/view?usp=drive_link).
