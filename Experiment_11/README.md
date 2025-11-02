@@ -72,6 +72,8 @@ Build a mobile app that fetches wallpapers from a **Public REST API** (Pexels AP
 
 - **Loading State:** Circular spinner shown while fetching wallpapers.
 - **Loaded State:** Wallpapers displayed in a **grid view** with images loaded via `cached_network_image`.
+- You can view the output over [here](https://drive.google.com/file/d/1xBux8cxSdBUa-rFQ98tn_PKDhqpexXZO/view?usp=drive_link).
 - **Empty State:** Message “No wallpapers found 😕” if API returns no results.
 - **Error State:** Message with retry button if fetching fails (e.g., wrong API key, network error).
+
 - **Full-screen View:** Tap any wallpaper to view it in full resolution.
