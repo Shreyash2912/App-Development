@@ -162,6 +162,7 @@ The app supports **Email/Password**, **Google Sign-In**, and **Phone Number Veri
 - **Home Screen:** Displays upon successful login.  
 - **Logout:** Signs user out and navigates back to Login page.  
 - **Session Handling:** Automatically detects and maintains login state.
+- You can view the output over [here](https://drive.google.com/file/d/1wieSO0QVpLEzNsM52954DWEQL7HBI-9h/view?usp=drive_link).
 
 ---
 
@@ -174,5 +175,6 @@ Successfully developed a **React Native app** named **Authentication** integrati
 - **Automatic Session Management**
 
 The app provides a secure, efficient, and user-friendly authentication system using Firebase services.
+
 
 ---
