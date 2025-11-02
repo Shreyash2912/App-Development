@@ -61,10 +61,11 @@ To create a Flutter calculator app that **stores calculation history locally usi
 
 3. **Data Persistence**
    - Calculation history persists even after closing or restarting the app.
-   - you can view the output [here](/.https://drive.google.com/file/d/1RTaWBSKZ4nGUFgudGb5-8R99OMCTuNDf/view?usp=drive_link)
+   - you can view the output [here](https://drive.google.com/file/d/1RTaWBSKZ4nGUFgudGb5-8R99OMCTuNDf/view?usp=drive_link)
 
 ---
 
 ## Outcome
 
 A fully functional Flutter calculator with **persistent storage** using SQLite and **interactive history management**, suitable for real-world applications or database experiments.
+
