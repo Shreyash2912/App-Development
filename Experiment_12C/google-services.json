@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "270067575713",
+    "project_id": "authjava-66db8",
+    "storage_bucket": "authjava-66db8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:270067575713:android:c00cbba83563d3ca91f9e0",
+        "android_client_info": {
+          "package_name": "com.example.authapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtynEoSEnr3J4agI0SkhW210bIcmIM2xw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:270067575713:android:f8cefe8ade13ca4c91f9e0",
+        "android_client_info": {
+          "package_name": "com.example.authenticateapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtynEoSEnr3J4agI0SkhW210bIcmIM2xw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
