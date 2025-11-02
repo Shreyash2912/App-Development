@@ -120,6 +120,7 @@ The app supports **Email/Password**, **Google Sign-In**, and **Phone Number Veri
 - **Home Screen:** Displays after successful authentication.  
 - **Logout:** Signs the user out and returns to Login page.  
 - **Session Handling:** Automatically detects login state and navigates accordingly.
+- You can access the output over [here](https://drive.google.com/file/d/1avwPQzPH1OJ6DE_whH4RMZONw2Zm6bQ9/view?usp=drive_link).
 
 ---
 
@@ -130,5 +131,6 @@ Successfully developed a Flutter app named **Authentication** integrating **Fire
 - **Phone Number OTP Verification**
 - **Forgot Password Feature**
 - **Automatic Session Management**
+
 
 The app provides a complete, secure, and user-friendly authentication system.
