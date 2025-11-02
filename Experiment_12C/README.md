@@ -83,6 +83,7 @@ The app supports **Email/Password**, **Google Sign-In**, and **Phone Number Veri
 - **Home Screen:** Displays after successful login with Logout button.  
 - **Logout:** Signs user out and navigates back to Login screen.  
 - **Session Handling:** Automatically detects and maintains login state.
+- You can access the output over [here](https://drive.google.com/file/d/1jjKwnO-FHWE4Qg3En8ESIVmI7c7m6wEh/view?usp=drive_link).
 
 ---
 
@@ -96,3 +97,4 @@ Successfully developed an **Android app** named **FirebaseAuthApp** integrating 
 The app provides a secure, efficient, and user-friendly authentication system using **Firebase services**.
 
 ---
+
