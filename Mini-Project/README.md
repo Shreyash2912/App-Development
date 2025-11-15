@@ -1,4 +1,4 @@
- Language of the Day App
+ *Language of the Day App*
 
 A modern, lightweight language-learning app that gives users a Language of the Day, daily challenges, practice questions, and a premium (VIP) mode — fully powered by Firebase and feature flags.
 
@@ -147,10 +147,10 @@ All tests are now structured to pass without Firebase thanks to the fake app sta
 
 Example:
 
-![Home Screen](outputs/Home.png)
-![Practice Screen](Outputs/Practice.png)
-![VIP Upsell](Outputs/Premium.png)
-![Admin Panel](Outputs/Admin.png)
+![Home Screen](outputs/Home.jpeg)
+![Practice Screen](Outputs/Practice.jpeg)
+![VIP Upsell](Outputs/Premium.jpeg)
+![Admin Panel](Outputs/Admin.jpeg)
 
 📦 APK Release Download
 [Language-of-the-day-app](https://drive.google.com/file/d/1rPR3AjPWB3kbD5_Qcx2eWcn3G2GnWxIy/view?usp=sharing)
@@ -187,3 +187,4 @@ Student Admin: shreyashkerkar@gmail.com
 
 User:
 shreyashkerkar1655@gmail.com / 123456
+
