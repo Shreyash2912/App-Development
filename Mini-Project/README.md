@@ -143,7 +143,7 @@ fake_app_state.dart	Mocked provider for tests
 
 All tests are now structured to pass without Firebase thanks to the fake app state.
 
-🖼 Screenshots (Add your images here)
+🖼 Screenshots 
 
 Example:
 
@@ -187,4 +187,5 @@ Student Admin: shreyashkerkar@gmail.com
 
 User:
 shreyashkerkar1655@gmail.com / 123456
+
 
