@@ -1,191 +1,228 @@
- *Language of the Day App*
+# Language of the Day App – Flutter + Firebase  
 
-A modern, lightweight language-learning app that gives users a Language of the Day, daily challenges, practice questions, and a premium (VIP) mode — fully powered by Firebase and feature flags.
 
-🚀 Features
-✅ Authentication
+---
 
-Email/Password login
+## 📌 Overview
+A modern and lightweight **language-learning mobile application** created using **Flutter** and **Firebase**.  
+The app displays a **Language of the Day**, daily challenges, practice questions, and a complete **Premium (VIP)** unlock system controlled via **Firestore feature flags**.
 
-Signup with default Firestore user document
+---
 
-User roles:
+## 🚀 Features
 
-user
+### ✅ Authentication
+- Email/Password login  
+- Signup creates Firestore user document  
+- User roles:
+  - `user`
+  - `admin` (professor / student admin)
 
-admin (professor / student admin)
-
-✅ Premium (VIP) System
-
-Firestore stores:
-
-role: "user"
+### ✅ Premium (VIP) System
+Firestore default user fields:
+```json
+role: "user",
 premium: false
+```
 
+- Unlock VIP by setting `premium: true`
+- Shows Upsell page for non-premium users
+- VIP removes ads and unlocks unlimited practice
 
-Upsell page when premium features are accessed
-
-Toggle premium=true to unlock VIP instantly
-
-✅ Feature Flags
-
-Firestore collection:
-
-features/newUI  → true/false  
+### ✅ Feature Flags (Firestore Controlled)
+Stored under:
+```
+features/newUI  → true/false
 features/premiumContent → true/false
+```
+Allows enabling/disabling features **without updating the app**.
 
-✅ Daily Challenge & Practice
+### ✅ Daily Challenge & Practice
+- Auto-generated questions  
+- Smooth animations  
+- VIP-only enhanced challenges  
 
-Auto-generated questions
-
-Smooth UI animations
-
-Progress tracking
-
-✅ Admin Panel
-
-Only visible if:
-
+### ✅ Admin Panel
+Visible only when:
+```
 role == "admin"
+```
 
+Admin can:
+- Toggle premium  
+- Update feature flags  
+- Manage user roles  
 
-Manage premium, features, and users (future-ready)
+---
 
-🔧 Setup Instructions
-1️⃣ Install dependencies
+## 🔧 Setup Instructions
+
+### **1️⃣ Install dependencies**
+```
 flutter pub get
+```
 
-2️⃣ Add Firebase configuration files
-
-Android:
-
+### **2️⃣ Add Firebase configuration files**
+```
 android/app/google-services.json
-
-
-iOS:
-
 ios/Runner/GoogleService-Info.plist
+```
 
-3️⃣ Run Firebase initialization command
+### **3️⃣ Initialize Firebase**
+```
 flutterfire configure
+```
 
-4️⃣ Run the app
+### **4️⃣ Run the app**
+```
 flutter run
+```
 
-🔐 Admin Accounts
-Professor Admin
-Email: vpg@gmail.com  
+---
+
+## 🔐 Test Admin Accounts
+
+### **Professor Admin**
+```
+Email: vpg@gmail.com
 Password: 987654
+```
 
-Student Admin
+### **Student Admin**
+```
 Email: shreyashkerkar@gmail.com
 Password: shreyash
+```
 
-👤 Test User Credentials (Non-Admin)
+### **Test User (Non-Admin)**
+```
 Email: shreyashkerkar1655@gmail.com
 Password: 123456
+```
 
+Use this for:
+- VIP gating  
+- Upsell flow  
+- Feature flags testing  
 
-Use this account to test:
+---
 
-VIP gated content
+## ⭐ VIP Upsell Flow
 
-Upsell screen
-
-Feature flags
-
-⭐ VIP Upsell Flow
-How to reach VIP page:
-
-Login with non-premium user
-
-Navigate to:
-
-Home → Practice → Premium questions
-
-
-App auto-detects:
-
+1. Login with non-premium account  
+2. Navigate:
+```
+Home → Practice → Premium Questions
+```
+3. App detects:
+```
 premium == false
-
-
-Shows VIP Upsell Page
-
-To grant VIP:
-
-Go to Firestore → users/{uid}
-
-Set:
-
+```
+4. Displays VIP Upsell Screen  
+5. To grant VIP:
+```
+Firestore → users/{uid}
 premium: true
+```
+Restart the app → VIP unlocked
 
+---
 
-Restart app → VIP unlocked
+## 👑 VIP-Only Features
 
-👑 VIP-Only Features
-Feature	Free	VIP
-Daily Challenge	✅	⭐ Enhanced
-Practice Questions	Limited	Unlimited
-New UI (flag-controlled)	❌	✅
-Premium Content	❌	✅
-Ads	❌	Removed
-🧪 Testing (Flutter + Jest style widget tests)
-Run all tests
+| Feature               | Free | VIP |
+|----------------------|:----:|:---:|
+| Daily Challenge      |  ✔   | ⭐ Enhanced |
+| Practice Questions   |  Limited | Unlimited |
+| New UI (feature flag) |  ❌  | ✔ |
+| Premium Content      |  ❌  | ✔ |
+| Ads                  |  ❌  | Removed |
+
+---
+
+## 🧪 Testing (Flutter Tests)
+
+### Run All Tests
+```
 flutter test
+```
 
-Test Files Included:
-Test File	What It Tests
-signup_firestore_test.dart	User doc created with role:user & premium:false
-admin_panel_test.dart	Admin Panel hidden for non-admin users
-premium_gating_test.dart	Premium page hidden for VIP users
-vip_test.dart	Upsell visibility logic
-fake_app_state.dart	Mocked provider for tests
+### Test Files Included
 
-All tests are now structured to pass without Firebase thanks to the fake app state.
+| Test File | Description |
+|-----------|-------------|
+| **signup_firestore_test.dart** | User doc saved with role:user & premium:false |
+| **admin_panel_test.dart** | Admin Panel hidden for normal users |
+| **premium_gating_test.dart** | Ensures Premium UI is hidden for VIP |
+| **vip_test.dart** | Upsell visibility logic |
+| **fake_app_state.dart** | Mock provider to remove Firebase dependency |
 
-🖼 Screenshots 
+---
 
-Example:
+## 🖼 Screenshots
 
-![Home Screen](outputs/Home.jpeg)
-![Practice Screen](Outputs/Practice.jpeg)
-![VIP Upsell](Outputs/Premium.jpeg)
-![Admin Panel](Outputs/Admin.jpeg)
 
-📦 APK Release Download
-[Language-of-the-day-app](https://drive.google.com/file/d/1rPR3AjPWB3kbD5_Qcx2eWcn3G2GnWxIy/view?usp=sharing)
+-[Home Page](outputs/Home.jpeg)
+-[Practice Page](outputs/Practice.jpeg)
+-[Premium Page](outputs/Premium.jpeg)
+-[Admin Page](outputs/Admin.jpeg)
 
-Output videos - 
-[Output1](https://drive.google.com/file/d/1PMb3aJ_ZZ0ouzyj3JygCfKMHQtpPQXDc/view?usp=sharing)
-[Output2](https://drive.google.com/file/d/1gI8H3BzIUbAt9se5VXeog-RW3gtgtD7y/view?usp=drive_link)
 
-📘 Mini Project Details
-App Title - Language of The Day Learning App
 
-Tech Used
 
-Flutter (Dart)
+## 📦 APK Download
 
-Firebase Authentication
+[Language-of-the-day-app (Google Drive)](https://drive.google.com/file/d/1rPR3AjPWB3kbD5_Qcx2eWcn3G2GnWxIy/view?usp=sharing)
 
-Cloud Firestore
+---
 
-Provider Architecture
+## 🎥 Output Videos
 
-REST API (LibreTranslate or custom)
+- [Output Video 1](https://drive.google.com/file/d/1PMb3aJ_ZZ0ouzyj3JygCfKMHQtpPQXDc/view?usp=sharing)  
+- [Output Video 2](https://drive.google.com/file/d/1gI8H3BzIUbAt9se5VXeog-RW3gtgtD7y/view?usp=drive_link)
 
-Widget Testing (Flutter Test)
+---
 
-Short Description
-Lingo is a modern language-learning app that shows users a new “Language of the Day” with challenges and
-practice sessions. It includes premium features, admin roles, and feature flags powered by Firebase Firestore.
+## 📘 Mini Project Details
 
-Test Credentials
+### **App Title**  
+```
+Language of the Day Learning App
+```
+
+### **Technologies Used**
+- Flutter (Dart)  
+- Firebase Authentication  
+- Cloud Firestore  
+- Provider Architecture  
+- REST API (LibreTranslate / Custom)  
+- Flutter Widget Testing  
+
+### **Short Description**
+Lingo is a modern language-learning app that displays a **Language of the Day**, daily challenges, and practice sessions.  
+It includes a VIP system, admin panel, and feature flags fully managed through Firebase.
+
+### **Test Credentials**
+```
 Admin:
-Professor: vpg@gmail.com / 1234
-Student Admin: shreyashkerkar@gmail.com
+Professor → vpg@gmail.com / 1234
+Student Admin → shreyashkerkar@gmail.com
 
 User:
 shreyashkerkar1655@gmail.com / 123456
+```
 
+---
 
+## 🏁 Result
+Successfully developed a **Flutter + Firebase** app with:
+- User Authentication  
+- Premium (VIP) Unlock System  
+- Feature Flag Control  
+- Admin Panel  
+- Daily Challenge & Practice  
+- Mocked tests running without Firebase  
+
+The application is **secure, scalable, and production-ready**.
+
+---
