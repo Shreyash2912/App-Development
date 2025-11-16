@@ -156,15 +156,17 @@ flutter test
 | **premium_gating_test.dart** | Ensures Premium UI is hidden for VIP |
 | **auth_test.dar** | Ensures if the authentication is working for users |
 
+Output of the test --> [Test Output](Outputs/Test.png)
+
 ---
 
 ## 🖼 Screenshots
 
 
--[Home Page](outputs/Home.jpeg)
--[Practice Page](outputs/Practice.jpeg)
--[Premium Page](outputs/Premium.jpeg)
--[Admin Page](outputs/Admin.jpeg)
+-[Home Page](Outputs/Home.jpeg)
+-[Practice Page](Outputs/Practice.jpeg)
+-[Premium Page](Outputs/Premium.jpeg)
+-[Admin Page](Outputs/Admin.jpeg)
 
 
 
@@ -225,4 +227,5 @@ Successfully developed a **Flutter + Firebase** app with:
 The application is **secure, scalable, and production-ready**.
 
 ---
+
 
