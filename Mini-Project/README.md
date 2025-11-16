@@ -154,8 +154,7 @@ flutter test
 | **signup_firestore_test.dart** | User doc saved with role:user & premium:false |
 | **admin_panel_test.dart** | Admin Panel hidden for normal users |
 | **premium_gating_test.dart** | Ensures Premium UI is hidden for VIP |
-| **vip_test.dart** | Upsell visibility logic |
-| **fake_app_state.dart** | Mock provider to remove Firebase dependency |
+| **auth_test.dar** | Ensures if the authentication is working for users |
 
 ---
 
@@ -226,3 +225,4 @@ Successfully developed a **Flutter + Firebase** app with:
 The application is **secure, scalable, and production-ready**.
 
 ---
+
